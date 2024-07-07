@@ -18,20 +18,20 @@ USE_FLAGS="-fprofile-use=${PROFILES} -fprofile-correction -fprofile-partial-trai
 BUILD_DATE="$(cat ${WORK_DIR}/gcc/gcc/DATESTAMP)"
 BUILD_DAY="$(date "+%d %B %Y")"
 BUILD_TAG="$(date +%Y%m%d-%H%M-%Z)"
-TARGETS=(aarch64-linux-gnu)
+TARGETS=(x86_64-linux-gnu)
 HEAD_SCRIPT="$(git log -1 --oneline)"
 HEAD_GCC="$(git --git-dir gcc/.git log -1 --oneline)"
 HEAD_BINUTILS="$(git --git-dir binutils/.git log -1 --oneline)"
 GCC="${PREFIX}/${TARGETS[0]}/bin/${TARGETS[0]}-gcc"
 BINUTILS="${PREFIX}/${TARGETS[0]}/bin/${TARGETS[0]}-ld"
-PKG_VERSION="CAT"
+PKG_VERSION="eraselk"
 BINUTILS_VERSION=$(grep "^PACKAGE_VERSION=" "${WORK_DIR}/binutils/ld/configure" | grep -oP "'\K[^']+(?=')")
 FULL_VERSION=$(cat "${WORK_DIR}/gcc/gcc/BASE-VER")
 MAJOR_VERSION=$(echo ${FULL_VERSION} | cut -d '.' -f 1)
 KERNEL="${WORK_DIR}/kernel"
 MASTER=false
 FINAL=false
-CHAT_ID=-1001180467256
+CHAT_ID=-1001802548906
 
 for ARGS in $@; do
     case $ARGS in
