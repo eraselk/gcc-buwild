@@ -1,10 +1,5 @@
 name: Weekly GCC Build
 
-#on:
-  #workflow_dispatch:
-  #schedule:
-    #- cron: '0 08 * * 5'
-
 env:
   GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
   TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
