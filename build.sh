@@ -217,11 +217,7 @@ strip_binaries() {
 }
 git_push() {
     send_info "<b>GitHub Action : </b><pre>Release into GitHub . . .</pre>"
-    if $MASTER; then
-        git clone https://Diaz1401:$GITHUB_TOKEN@github.com/mengkernel/gcc $WORK_DIR/gcc-repo -b main
-    else
-        git clone https://Diaz1401:$GITHUB_TOKEN@github.com/mengkernel/gcc-stable $WORK_DIR/gcc-repo -b main
-    fi
+    git clone https://eraselk:$GITHUB_TOKEN@github.com/eraselk/gcc-releases $WORK_DIR/gcc-repo
     cd $WORK_DIR/gcc-repo
     GCC_CONFIG="$($GCC -v 2>&1)"
     MESSAGE="GCC: $FULL_VERSION-$BUILD_DATE, Binutils: $BINUTILS_VERSION"
