@@ -20,7 +20,7 @@ jobs:
     - name: Install dependencies
       shell: bash
       run: |
-        apt update && apt upgrade -y && apt install -y --no-install-recommends lsb-release wget \
+        sudo apt update && sudo apt upgrade -y && sudo apt install -y --no-install-recommends lsb-release wget \
         software-properties-common gnupg bc binutils-dev u-boot-tools bison gcc g++ ca-certificates ccache \
         cmake curl file flex patchelf libelf-dev libssl-dev make python3-all-dev texinfo xz-utils \
         zlib1g-dev hub help2man locales ca-certificates build-essential ncurses-dev gperf patch libtool \
